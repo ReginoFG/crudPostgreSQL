@@ -1,0 +1,20 @@
+Recordar actualizar proyecto tras cambios en el pom.xml
+En el proyecto botón derecho->Maven->Update Project
+
+Para lanzar el proyecto Maven, botón derecho sobre este -> Run as -> seleccionar una opción:
+
+- Maven build 
+  Compila el código del proyecto, compila el código fuente del proyecto revisando 
+  todos los directorios src/main/java, alojando los ficheros .class en target/classes.
+  
+- Maven clean 
+  Elimina todos los ficheros hechos por los builds anteriores.
+
+- Maven generate-sources 
+  Genera código para incluirlo en la compilación.
+  
+- Maven install 
+  Instala los paquetes de la biblioteca en un repositorio local, compila el proyecto y lo comprueba.
+  
+- Maven test
+  Ejecuta los test definidos.

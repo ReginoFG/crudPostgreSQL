@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.crudPostgreSQL</groupId>
+  <artifactId>crudPostgreSQL</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>crudPostgreSQL</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <!--<dependency>
+  		<groupId>org.apache.maven.plugins</groupId>
+  		<artifactId>maven-compiler-plugin</artifactId>
+  		<version>3.10.1</version>
+  		<type>maven-plugin</type>
+	</dependency>-->
+	<dependency>
+	    <groupId>org.postgresql</groupId>
+	    <artifactId>postgresql</artifactId>
+	    <version>42.5.0</version>
+	</dependency>
+  </dependencies>
+  <!-- Añadimos un nuevo plugin para que Maven se encargue de gestionar el JRE 
+  (Java Runtime Environment). Recordemos que es lo que permite la ejecución de programas Java.
+  La versión de las etiquetas source y targen deben coincidir con la que vemos en 
+  la librería JRE System Library.
+  La etiqueta pluginManagemente se encargará de gestionar los plugins.
+  Con la etiqueta plugin añadimos uno nuevo, en este caso el compilador, al cual indicamos que siga
+  el JRE disponible en nuestro local 1.5-->
+  <build>
+  	<plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.3.1</version>
+        </plugin>
+    </plugins>
+  </build>
+  <!-- Recordar actualizar proyecto tras cambios en el pom.xml: 
+  En el proyecto botón derecho->Maven->Update Project-->
+</project>
